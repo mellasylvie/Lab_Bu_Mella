@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Membuat Web Portofolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      pre code {
+        background-color: #eaebd0;
+        padding: 1rem;
+        display: block;
+        border-radius: 0.5rem;
+        font-family: "Courier New", monospace;
+        font-size: 0.9rem;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <main>
+      <article class="container-fluid mt-3">
+        <div>
+          <button class="btn btn-primary mb-3" onclick="history.back()">
+            Kembali
+          </button>
+        </div>
+      </article>
+
+      <div class="container-fluid">
+        <h2 class="mb-4 text-center">Membuat Web Portofolio</h2>
+
+        <!-- Card 1 -->
+        <div class="card mb-3 shadow">
+          <div class="card-body">
+            <div class="container-fluid bg-dark text-white p-3 mb-3">
+              <h5>Proyek Web Portofolio</h5>
+            </div>
+
+            <div class="text-center">
+              <img
+                src="../../assets/img/web_porto.png"
+                class="img-fluid mb-3 rounded"
+                alt="Komponen Dasar Website"
+                width="50%"
+              />
+            </div>
+
+            <p class="card-text">
+              Pada pertemuan ini, kita akan membuat sebuah web portofolio
+              sederhana dengan HTML, Bootstrap, dan JS. Web portofolio ini akan
+              menampilkan informasi tentang diri kita, seperti nama, portofolio,
+              dan kontak. Nantinya web portofolio ini akan kita upload ke GitHub
+              Pages agar dapat diakses secara online. Seperti contoh berikut
+              ini:
+            </p>
+            <a
+              href="https://mellasylvie.github.io/web_portofolio_bootstrap/"
+              target="_blank"
+              >Contoh Web Portofolio</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card mb-3 shadow">
+        <div class="card-body">
+          <div class="container-fluid bg-dark text-white p-3 mb-3">
+            <h5>Tools yang Digunakan</h5>
+          </div>
+
+          <ul>
+            <li>Visual Studio Code</li>
+            <li>
+              Bootstrap –
+              <a href="https://getbootstrap.com/" target="_blank"
+                >https://getbootstrap.com/</a
+              >
+            </li>
+            <li>
+              Bootstrap Icons –
+              <a href="https://icons.getbootstrap.com/" target="_blank"
+                >https://icons.getbootstrap.com/</a
+              >
+            </li>
+            <li>
+              ColorHunt (Referensi Warna) –
+              <a href="https://colorhunt.co/" target="_blank"
+                >https://colorhunt.co/</a
+              >
+            </li>
+            <li>
+              StorySet (Ilustrasi Vektor) –
+              <a href="https://storyset.com/" target="_blank"
+                >https://storyset.com/</a
+              >
+            </li>
+          </ul>
+
+          <p class="card-text mt-3">
+            File asset/gambar pada proyek ini dapat diunduh melalui tautan
+            berikut:
+            <br />
+            <a
+              href="https://drive.google.com/drive/folders/12bLxtCjj-XJKvM3VIp-mOKPpQwYb0anH?usp=sharing"
+              target="_blank"
+            >
+              Unduh Asset Proyek (Google Drive)
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <!-- Card Judul Langkah-langkah Pembuatan -->
+      <div class="card mb-3 shadow">
+        <div class="card-body">
+          <div class="container-fluid bg-dark text-white p-3 mb-3">
+            <h5>Langkah-langkah Pembuatan</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card Langkah 1 -->
+      <div class="card mb-3 shadow">
+        <div class="card-body">
+          <div class="container-fluid bg-dark text-white p-3 mb-3">
+            <h5>Langkah 1. Buat Folder Proyek</h5>
+          </div>
+
+          <p class="card-text">
+            Buat folder proyek utama yang berisi struktur sebagai berikut:
+          </p>
+          <ul>
+            <li><code>index.html</code></li>
+            <li>
+              <strong>css/</strong>
+              <ul>
+                <li><code>style.css</code></li>
+              </ul>
+            </li>
+            <li><strong>img/</strong> (menyimpan gambar-gambar)</li>
+            <li>
+              <strong>js/</strong>
+              <ul>
+                <li><code>script.js</code></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="text-center">
+          <img
+            src="../../assets/img/struktur folder.png"
+            class="img-fluid mb-3 rounded"
+            alt="Komponen Dasar Website"
+            width="20%"
+          />
+        </div>
+      </div>
+
+      <!-- Langkah 2 -->
+      <!-- Card Langkah 2 -->
+      <div class="card mb-3 shadow">
+        <div class="card-body">
+          <div class="container-fluid bg-dark text-white p-3 mb-3">
+            <h5>Langkah 2. Menyusun kode awal</h5>
+          </div>
+
+          <p class="card-text">
+            <strong>Menyusun struktur awal file HTML</strong><br />
+            Pada tahap ini dilakukan penyusunan struktur awal HTML,
+            menghubungkan Bootstrap, Bootstrap Icons, dan file CSS pada bagian
+            <code>&lt;head&gt;</code>, serta menyusun struktur
+            <em>semantic HTML</em> menggunakan tag <code>header</code>,
+            <code>main</code>, dan <code>footer</code>.
+          </p>
+
+          <p class="card-text">
+            Silakan tuliskan kode berikut pada file <code>index.html</code>:
+          </p>
+
+          <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+    &lt;title&gt;Portofolio - Mellania&lt;/title&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/&gt;
+    &lt;link rel="stylesheet" href="css/style.css" /&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;!-- Header --&gt;
+    &lt;header&gt;
+      
+    &lt;/header&gt;
+
+    &lt;!-- Konten Web --&gt;
+    &lt;main&gt;
+    &lt;/main&gt;
+
+    &lt;!-- Footer --&gt;
+    &lt;footer class="py-3"&gt;
+    &lt;/footer&gt;
+
+    &lt;script src="js/script.js"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+        </div>
+      </div>
+
+      <!-- Langkah 3 -->
+      <!-- Card Langkah 3 -->
+      <div class="card mb-3 shadow">
+        <div class="card-body">
+          <div class="container-fluid bg-dark text-white p-3 mb-3">
+            <h5>Langkah 3. Tuliskan Aturan CSS</h5>
+          </div>
+
+          <p class="card-text">
+            <strong>Tuliskan styling pada file <code>style.css</code></strong
+            ><br />
+            Silakan tuliskan kode rule CSS berikut untuk mengatur tampilan hero,
+            animasi kursor, portofolio card, dan footer.
+          </p>
+
+          <pre><code>
+body {
+    font-family: "Segoe UI", sans-serif;
+}
+
+.hero {
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.cursor {
+    display: inline-block;
+    color: #007bff;
+    animation: blink 1s infinite;
+    font-weight: bold;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.portfolio-card {
+    transition: transform 0.3s;
+}
+
+.portfolio-card:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #eaefef;
+    text-align: center;
+    padding: 20px 0;
+}
+    </code></pre>
+        </div>
+      </div>
+
+      <!-- Langkah 4 -->
+      <!-- Card Langkah 4 -->
+      <div class="card mb-3 shadow">
+        <div class="card-body">
+          <div class="container-fluid bg-dark text-white p-3 mb-3">
+            <h5>Langkah 4. Membuat Navbar</h5>
+          </div>
+
+          <p class="card-text">
+            <strong>Membuat Navbar</strong><br />
+            Navbar dituliskan di dalam elemen <code>&lt;header&gt;</code>.
+            Silakan salin kode berikut dan tempatkan di dalam bagian
+            <code>&lt;header&gt;</code> pada file <code>index.html</code>.
+          </p>
+
+          <pre><code>
+&lt;!-- Navbar --&gt;
+&lt;nav
+  class="navbar navbar-expand-lg fixed-top"
+  style="background-color: #eaefef"
+&gt;
+  &lt;div class="container-fluid"&gt;
+    &lt;a class="navbar-brand" href="#"&gt;
+      &lt;img
+        src="img/logo_mella.png"
+        alt="Logo"
+        width="30"
+        height="30"
+        class="d-inline-block align-text-top"
+      /&gt;
+      Mellania
+    &lt;/a&gt;
+    &lt;button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    &gt;
+      &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+
+    &lt;div
+      class="collapse navbar-collapse justify-content-end"
+      id="navbarNav"
+    &gt;
+      &lt;!-- List Menu --&gt;
+      &lt;ul class="navbar-nav"&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link" aria-current="page" href="#about"&gt;About&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link" href="#portofolio"&gt;Portofolio&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link" href="#kontak"&gt;Kontak&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+    </code></pre>
+        </div>
+      </div>
+
+      <!-- Langkah 5 Hero -->
+      <!-- Card Langkah 5 -->
+      <div class="card mb-3 shadow">
+        <div class="card-body">
+          <div class="container-fluid bg-dark text-white p-3 mb-3">
+            <h5>Langkah 5. Membuat bagian HERO</h5>
+          </div>
+
+          <p class="card-text">
+            <strong>Membuat Bagian Hero</strong><br />
+            Bagian Hero diletakkan tepat di bawah kode Navbar. Silakan salin dan
+            tempel kode berikut pada file <code>index.html</code> setelah elemen
+            <code>&lt;/nav&gt;</code>.
+          </p>
+
+          <pre><code>
+&lt;!-- Hero --&gt;
+&lt;section class="hero py-4 bg-light"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="row align-items-center"&gt;
+
+      &lt;!-- Bagian Teks--&gt;
+      &lt;div class="col-md-6"&gt;
+        &lt;h1&gt;
+          &lt;span id="typing-text"&gt;&lt;/span&gt;&lt;span class="cursor"&gt;|&lt;/span&gt;
+        &lt;/h1&gt;
+        &lt;p class="lead"&gt;Seorang Web Developer &amp; Pengajar Teknologi&lt;/p&gt;
+        &lt;a href="#portofolio" class="btn btn-light mt-3"&gt;
+          Lihat Portofolio
+        &lt;/a&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Bagian Gambar --&gt;
+      &lt;div class="col-md-6 text-center"&gt;
+        &lt;img
+          src="img/hero.png"
+          alt="Foto Profil"
+          class="img-fluid"
+          style="max-width: 80%"
+        /&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+    </code></pre>
+        </div>
+      </div>
+
+      <!-- Langkah 6. Kode JS -->
+      <!-- Card Langkah 6 -->
+      <div class="card mb-3 shadow">
+        <div class="card-body">
+          <div class="container-fluid bg-dark text-white p-3 mb-3">
+            <h5>Langkah 6. Menambahkan Kode JavaScript</h5>
+          </div>
+
+          <p class="card-text">
+            <strong>Menambahkan Kode JavaScript</strong><br />
+            Tambahkan kode berikut ke dalam file <code>script.js</code> untuk
+            membuat efek teks yang diketik secara otomatis pada elemen hero.
+          </p>
+
+          <pre><code>
+const text = "Halo, Saya Mellania";
+const typingElement = document.getElementById("typing-text");
+
+let charIndex = 0;
+let isDeleting = false;
+
+function typeLoop() {
+  if (!isDeleting) {
+    typingElement.textContent = text.substring(0, charIndex + 1);
+    charIndex++;
+
+    if (charIndex === text.length) {
+      isDeleting = true;
+      setTimeout(typeLoop, 1500); // jeda sebelum menghapus
+      return;
+    }
+  } else {
+    typingElement.textContent = text.substring(0, charIndex - 1);
+    charIndex--;
+
+    if (charIndex === 0) {
+      isDeleting = false;
+    }
+  }
+
+  setTimeout(typeLoop, isDeleting ? 50 : 100); // kecepatan mengetik / hapus
+}
+
+document.addEventListener("DOMContentLoaded", typeLoop);
+    </code></pre>
+        </div>
+      </div>
+
+      <!-- Langkah 7 Tentang Saya -->
+      <!-- Card Langkah 7 -->
+      <div class="card mb-3 shadow">
+        <div class="card-body">
+          <div class="container-fluid bg-dark text-white p-3 mb-3">
+            <h5 class="mb-0">
+              Langkah 7: Membuat konten bagian "Tentang Saya"
+            </h5>
+          </div>
+          <p class="card-text">
+            Silahkan buat konten tentang saya di dalam elemen
+            <code>&lt;main&gt;</code>. Salin dan tempelkan kode berikut:
+          </p>
+          <pre class="bg-light text-pink p-3 rounded"><code>
+&lt;!-- Tentang Saya --&gt;
+&lt;section id="about" class="py-5"&gt;
+  &lt;div class="container pt-4"&gt;
+    &lt;h2 class="text-center mb-4"&gt;Tentang Saya&lt;/h2&gt;
+    &lt;div class="row justify-content-center"&gt;
+      &lt;div class="col-md-8"&gt;
+        &lt;p&gt;
+          Saya adalah seorang pengembang web dan pendidik yang memiliki
+          passion dalam mengembangkan teknologi edukatif. Saya
+          berpengalaman dalam membuat aplikasi web, mengajar pemrograman,
+          dan membimbing siswa dalam project berbasis teknologi.
+        &lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+    </code></pre>
+        </div>
+      </div>
+
+      <!-- Langkah 8 Portofolio -->
+      <!-- Card Langkah 8 -->
+      <div class="card mb-3 shadow">
+        <div class="card-body">
+          <div class="container-fluid bg-dark text-white p-3 mb-3">
+            <h5>Langkah 8. Menambahkan bagian Portofolio</h5>
+          </div>
+          <p class="card-text">
+            Silahkan tuliskan kode bagian portofolio dibawah kode bagian tentang
+            saya. Silahkan tuliskan kode berikut :
+          </p>
+          <pre><code>
+  &lt;!-- Portofolio --&gt;
+  &lt;section id="portofolio" class="py-5 bg-light"&gt;
+    &lt;div class="container pt-4"&gt;
+      &lt;h2 class="text-center mb-5"&gt;Portofolio&lt;/h2&gt;
+      &lt;div class="row g-4"&gt;
+        &lt;!-- Kolom 1 --&gt;
+        &lt;div class="col-md-4"&gt;
+          &lt;div class="card portfolio-card"&gt;
+            &lt;img
+              src="img/proyek1.png"
+              class="card-img-top"
+              alt="Project 1"
+              style="height: 250px; object-fit: cover"
+            /&gt;
+            &lt;div class="card-body"&gt;
+              &lt;h5 class="card-title"&gt;Aplikasi Siswa&lt;/h5&gt;
+              &lt;p class="card-text"&gt;
+                Aplikasi data siswa berbasis web dengan fitur CRUD dan login
+                admin.
+              &lt;/p&gt;
+              &lt;a href="#" class="btn btn-primary"&gt;Lihat Aplikasi&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Kolom 2 --&gt;
+        &lt;div class="col-md-4"&gt;
+          &lt;div class="card portfolio-card"&gt;
+            &lt;img
+              src="img/proyek2.png"
+              class="card-img-top"
+              alt="Project 1"
+              style="height: 250px; object-fit: cover"
+            /&gt;
+            &lt;div class="card-body"&gt;
+              &lt;h5 class="card-title"&gt;Dashboard IoT&lt;/h5&gt;
+              &lt;p class="card-text"&gt;
+                Dashboard monitoring suhu & kelembaban real-time dengan
+                Flask dan Microdot.
+              &lt;/p&gt;
+              &lt;a href="#" class="btn btn-primary"&gt;Lihat Aplikasi&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Kolom 3 --&gt;
+        &lt;div class="col-md-4"&gt;
+          &lt;div class="card portfolio-card"&gt;
+            &lt;img
+              src="img/proyek3.png"
+              class="card-img-top"
+              alt="Project 1"
+              style="height: 250px; object-fit: cover"
+            /&gt;
+            &lt;div class="card-body"&gt;
+              &lt;h5 class="card-title"&gt;Klasifikasi Gambar AI&lt;/h5&gt;
+              &lt;p class="card-text"&gt;
+                Website untuk klasifikasi gambar menggunakan model AI
+              &lt;/p&gt;
+              &lt;a href="#" class="btn btn-primary"&gt;Lihat Aplikasi&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+    </code></pre>
+        </div>
+      </div>
+
+      <!-- Langkah 9 Kontak -->
+      <!-- Card Langkah 9 -->
+      <div class="card mb-3 shadow">
+        <div class="card-body">
+          <div class="container-fluid bg-dark text-white p-3 mb-3">
+            <h5>Langkah 9: Menambahkan bagian Kontak</h5>
+          </div>
+          <p class="card-text">
+            Silahkan buat bagian Kontak setelah bagian Portofolio. Silahkan
+            tuliskan kode berikut:
+          </p>
+          <pre><code>
+&lt;!-- Kontak --&gt;
+&lt;section id="kontak" class="py-5 bg-light text-center"&gt;
+  &lt;div class="container"&gt;
+    &lt;h2 class="mb-3"&gt;Kontak&lt;/h2&gt;
+    &lt;p class="mb-4 text-muted"&gt;
+      Silakan hubungi saya melalui media sosial berikut
+    &lt;/p&gt;
+    &lt;div class="d-flex justify-content-center gap-4 flex-wrap"&gt;
+      &lt;a
+        href="https://wa.me/6285781761657"
+        target="_blank"
+        class="text-decoration-none text-primary"
+      &gt;
+        &lt;i class="bi bi-whatsapp"&gt;&lt;/i&gt;&lt;br /&gt;Whatsapp
+      &lt;/a&gt;
+      &lt;a
+        href="mailto:mellaniapermata@gmail.com"
+        target="_blank"
+        class="text-decoration-none text-primary"
+      &gt;
+        &lt;i class="bi bi-envelope-at"&gt;&lt;/i&gt;&lt;br /&gt;Email
+      &lt;/a&gt;
+      &lt;a
+        href="https://instagram.com"
+        target="_blank"
+        class="text-decoration-none text-danger"
+      &gt;
+        &lt;i class="bi bi-instagram"&gt;&lt;/i&gt;&lt;br /&gt;Instagram
+      &lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+    </code></pre>
+        </div>
+      </div>
+
+      <!-- Langkah 10 Footer -->
+      <div class="card mb-3 shadow">
+        <div class="card-body">
+          <div class="container-fluid bg-dark text-white p-3 mb-3">
+            <h5 class="mb-0">Langkah 10. Menambahkan Footer</h5>
+          </div>
+          <p>
+            Silahkan tulis kode berikut setelah elemen
+            <code>&lt;main&gt;</code>:
+          </p>
+          <pre><code class="language-html">
+&lt;!-- Footer --&gt;
+&lt;footer class="py-3"&gt;
+  &lt;div
+    class="container d-flex justify-content-between align-items-center flex-column flex-md-row"
+  &gt;
+    &lt;!-- Sisi Kiri Teks--&gt;
+    &lt;p class="mb-2 mb-md-0"&gt;&copy; 2025 Mellania Permata Sylvie&lt;/p&gt;
+
+    &lt;!-- Sisi Kanan Ikon Sosmed--&gt;
+    &lt;div&gt;
+      &lt;a href="https://github.com/mellasylvie" target="_blank"&gt;
+        &lt;i class="bi bi-github fs-5"&gt;&lt;/i&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
+    </code></pre>
+        </div>
+      </div>
+
+      <!-- Card 11 -->
+      <div class="card mb-3 shadow">
+        <div class="card-body">
+          <div class="container-fluid bg-warning text-dark p-3 mb-3">
+            <h5 class="mb-0">Refleksi</h5>
+          </div>
+          <p>
+            Bagaimana, apakah web portofolionya sudah jadi? <br />
+            Apakah kamu mengikuti langkah-langkah dengan benar? <br />
+            Coba periksa kembali bagian-bagian penting seperti struktur HTML,
+            penempatan CSS, dan file gambar.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 12 -->
+      <div class="card mb-3 shadow">
+        <div class="card-body">
+          <div class="container-fluid bg-info text-white p-3 mb-3">
+            <h5 class="mb-0">Tugas Praktek</h5>
+          </div>
+          <p>
+            <strong>Tugas hari ini:</strong><br />
+            1. Silahkan ubah warna dari web portofolio yang kamu buat. Jangan
+            sampai warnanya sama dengan warna web portofolio saya.<br />
+            2. Silahkan ganti keterangan isi konten pada web-nya. Sesuaikan
+            dengan datamu.<br />
+            3. Silahkan ganti gambar dan link kontak sosial media milikmu.<br /><br />
+            Jadi silahkan sesuaikan isi web portofoliomu ya. Sesuaikan dengan
+            datamu. Jangan sampai masih tertulis data saya.<br /><br />
+            <strong>Selamat Mengerjakan :D</strong>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
